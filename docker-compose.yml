@@ -1,0 +1,39 @@
+version: '2'
+
+services:
+  loadbalancer:
+    image: jwilder/nginx-proxy
+    container_name: loadbalancer
+    ports:
+      - "8080:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+  
+  nginx1:
+    image: nginx:latest
+    container_name: nginx_1
+    environment:
+      - VIRTUAL_HOST=m
+    restart: unless-stopped
+    
+  nginx2:
+    image: nginx:latest
+    container_name: nginx_2
+    environment:
+      - VIRTUAL_HOST=m
+    restart: unless-stopped
+
+  nginx3:
+    image: nginx:latest
+    container_name: nginx_3
+    environment:
+      - VIRTUAL_HOST=m
+    restart: unless-stopped
+  
+  nginx4:
+    image: nginx:latest
+    container_name: nginx_4
+    environment:
+      - VIRTUAL_HOST=m
+    restart: unless-stopped
+    
