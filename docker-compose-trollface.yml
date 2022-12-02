@@ -3,7 +3,7 @@ version: '2'
 services:
   loadbalancer:
     image: jwilder/nginx-proxy
-    container_name: loadbalancer
+    container_name: loadbalancer_trollface
     ports:
       - "8080:80"
     volumes:
@@ -11,28 +11,28 @@ services:
   
   trollface1:
     image: tlc_test:latest
-    container_name: nginx_1
+    container_name: trollface_1
     environment:
       - VIRTUAL_HOST=m
     restart: unless-stopped
     
   trollface2:
     image: tlc_test:latest
-    container_name: nginx_2
+    container_name: trollface_2
     environment:
       - VIRTUAL_HOST=m
     restart: unless-stopped
 
   trollface3:
     image: tlc_test:latest
-    container_name: nginx_3
+    container_name: trollface_3
     environment:
       - VIRTUAL_HOST=m
     restart: unless-stopped
   
   trolleface4:
     image: tlc_test:latest
-    container_name: nginx_4
+    container_name: trolleface_4
     environment:
       - VIRTUAL_HOST=m
     restart: unless-stopped

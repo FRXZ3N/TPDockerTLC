@@ -19,6 +19,9 @@ WORKDIR /TPDockerSampleApp
 RUN mvn install:install-file -Dfile=./lib/opencv-3410.jar \
     -DgroupId=org.opencv  -DartifactId=opencv -Dversion=3.4.10 -Dpackaging=jar
 
+## EXPOSE on port 8080
+EXPOSE 8080
+
 # Compiling the project
 RUN mvn clean package
 
