@@ -1,5 +1,12 @@
 # Projet Docker
 
+## Rendu de TP
+
+Ce TP a été réalisé par GUERLESQUIN Valentin, MÉRANTHE Damien et RAMONÉ Benjamin.
+Ce repository contient les deux docker compose du TP :
+ - Le premier docker compose docker-compose-nginx pour le load-balancing
+ - Le deuxième docker compose docker-compose-trollface avec la construction de l'image de l'application, et le déploiement sur nginx via docker-compose
+
 Hello très chers étudiants,
 
 Le but de ce TP est de regarder comment nous pouvons utiliser docker pour faciliter le déploiement d'une application avec la mise en place d'un serveur web en reverse proxy etc...
